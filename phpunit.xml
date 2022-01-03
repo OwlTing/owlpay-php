@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         beStrictAboutTestsThatDoNotTestAnything="true"
+         beStrictAboutOutputDuringTests="true"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         failOnRisky="true"
+         failOnWarning="true"
+         processIsolation="false"
+         stopOnError="false"
+         stopOnFailure="false"
+         verbose="true"
+>
+    <testsuites>
+        <testsuite name="OwlPay Package Test Suite">
+            <directory suffix="Test.php">./tests/</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">./src/</directory>
+        </whitelist>
+    </filter>
+    <logging>
+        <log type="tap" target="./build/report.tap" showUncoveredFiles="true"/>
+        <log type="junit" target="./build/report.junit.xml" showUncoveredFiles="true"/>
+        <log type="coverage-html" target="./build/coverage" showUncoveredFiles="true"/>
+        <log type="coverage-text" target="./build/coverage.txt" showUncoveredFiles="true"/>
+        <log type="coverage-clover" target="./build/logs/clover.xml" showUncoveredFiles="true"/>
+    </logging>
+    <php>
+        <!-- Production sandbox -->
+<!--        <env name="OWLPAY_API_KEY" value="pk_test_FzN02Z7wnrL5uQ363QG6W7qWL5SP1Mh0PIj7"/>-->
+        <!-- Release sandbox -->
+<!--        <env name="OWLPAY_BASE_URL" value="https://api-release.owlpay.com"/>-->
+<!--        <env name="OWLPAY_API_KEY" value="pk_test_3ev1Wg0tepFXjm9jUFKCslwHHRS1kI1T7goW"/>-->
+        <!-- local sandbox -->
+        <env name="OWLPAY_BASE_URL" value="http://owlpay.owlting.worker"/>
+        <env name="OWLPAY_API_KEY" value="pk_test_pJ75EoVGJNpizRpfTFQ7scbBUZIfbTlV6aDJ"/>
+        <env name="OWLPAY_API_VERSION" value="v1"/>
+    </php>
+</phpunit>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="/Users/maras/Code/owlting/owlpay-php/tests/Api" tests="1" assertions="2" errors="0" warnings="0" failures="0" skipped="0" time="6.671756">
+    <testsuite name="OwlTing\OwlPay\Tests\Api\OrdersTest" file="/Users/maras/Code/owlting/owlpay-php/tests/Api/OrdersTest.php" tests="1" assertions="2" errors="0" warnings="0" failures="0" skipped="0" time="6.671756">
+      <testcase name="it_can_retrieve_all_orders" class="OwlTing\OwlPay\Tests\Api\OrdersTest" classname="OwlTing.OwlPay.Tests.Api.OrdersTest" file="/Users/maras/Code/owlting/owlpay-php/tests/Api/OrdersTest.php" line="74" assertions="2" time="6.671756"/>
+    </testsuite>
+  </testsuite>
+</testsuites>
