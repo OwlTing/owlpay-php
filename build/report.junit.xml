@@ -1,8 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="/Users/maras/Code/owlting/owlpay-php/tests/Api" tests="1" assertions="2" errors="0" warnings="0" failures="0" skipped="0" time="6.671756">
-    <testsuite name="OwlTing\OwlPay\Tests\Api\OrdersTest" file="/Users/maras/Code/owlting/owlpay-php/tests/Api/OrdersTest.php" tests="1" assertions="2" errors="0" warnings="0" failures="0" skipped="0" time="6.671756">
-      <testcase name="it_can_retrieve_all_orders" class="OwlTing\OwlPay\Tests\Api\OrdersTest" classname="OwlTing.OwlPay.Tests.Api.OrdersTest" file="/Users/maras/Code/owlting/owlpay-php/tests/Api/OrdersTest.php" line="74" assertions="2" time="6.671756"/>
+  <testsuite name="" tests="22" assertions="28" errors="0" warnings="0" failures="0" skipped="0" time="2.767969">
+    <testsuite name="OwlPay Package Test Suite" tests="22" assertions="28" errors="0" warnings="0" failures="0" skipped="0" time="2.767969">
+      <testsuite name="OwlTing\OwlPay\Tests\Api\OrdersTest" file="/home/ubuntu/owlpay-php/tests/Api/OrdersTest.php" tests="6" assertions="7" errors="0" warnings="0" failures="0" skipped="0" time="1.474105">
+        <testcase name="it_can_create_a_new_order" class="OwlTing\OwlPay\Tests\Api\OrdersTest" classname="OwlTing.OwlPay.Tests.Api.OrdersTest" file="/home/ubuntu/owlpay-php/tests/Api/OrdersTest.php" line="10" assertions="1" time="0.178151"/>
+        <testcase name="it_can_find_an_order" class="OwlTing\OwlPay\Tests\Api\OrdersTest" classname="OwlTing.OwlPay.Tests.Api.OrdersTest" file="/home/ubuntu/owlpay-php/tests/Api/OrdersTest.php" line="22" assertions="1" time="0.325580"/>
+        <testcase name="it_will_throw_an_exception_when_searching_for_a_non_existing_order" class="OwlTing\OwlPay\Tests\Api\OrdersTest" classname="OwlTing.OwlPay.Tests.Api.OrdersTest" file="/home/ubuntu/owlpay-php/tests/Api/OrdersTest.php" line="36" assertions="1" time="0.138457"/>
+        <testcase name="it_can_update_an_order" class="OwlTing\OwlPay\Tests\Api\OrdersTest" classname="OwlTing.OwlPay.Tests.Api.OrdersTest" file="/home/ubuntu/owlpay-php/tests/Api/OrdersTest.php" line="44" assertions="1" time="0.351694"/>
+        <testcase name="it_can_cancel_an_order" class="OwlTing\OwlPay\Tests\Api\OrdersTest" classname="OwlTing.OwlPay.Tests.Api.OrdersTest" file="/home/ubuntu/owlpay-php/tests/Api/OrdersTest.php" line="60" assertions="1" time="0.324640"/>
+        <testcase name="it_can_retrieve_all_orders" class="OwlTing\OwlPay\Tests\Api\OrdersTest" classname="OwlTing.OwlPay.Tests.Api.OrdersTest" file="/home/ubuntu/owlpay-php/tests/Api/OrdersTest.php" line="74" assertions="2" time="0.155583"/>
+      </testsuite>
+      <testsuite name="OwlTing\OwlPay\Tests\Api\VendorsTest" file="/home/ubuntu/owlpay-php/tests/Api/VendorsTest.php" tests="6" assertions="7" errors="0" warnings="0" failures="0" skipped="0" time="1.179953">
+        <testcase name="it_can_create_a_new_vendor" class="OwlTing\OwlPay\Tests\Api\VendorsTest" classname="OwlTing.OwlPay.Tests.Api.VendorsTest" file="/home/ubuntu/owlpay-php/tests/Api/VendorsTest.php" line="10" assertions="1" time="0.137166"/>
+        <testcase name="it_can_find_a_vendor" class="OwlTing\OwlPay\Tests\Api\VendorsTest" classname="OwlTing.OwlPay.Tests.Api.VendorsTest" file="/home/ubuntu/owlpay-php/tests/Api/VendorsTest.php" line="22" assertions="1" time="0.264789"/>
+        <testcase name="it_will_throw_an_exception_when_searching_for_a_non_existing_vendor" class="OwlTing\OwlPay\Tests\Api\VendorsTest" classname="OwlTing.OwlPay.Tests.Api.VendorsTest" file="/home/ubuntu/owlpay-php/tests/Api/VendorsTest.php" line="36" assertions="1" time="0.110910"/>
+        <testcase name="it_can_update_a_vendor" class="OwlTing\OwlPay\Tests\Api\VendorsTest" classname="OwlTing.OwlPay.Tests.Api.VendorsTest" file="/home/ubuntu/owlpay-php/tests/Api/VendorsTest.php" line="44" assertions="1" time="0.277291"/>
+        <testcase name="it_can_delete_a_vendor" class="OwlTing\OwlPay\Tests\Api\VendorsTest" classname="OwlTing.OwlPay.Tests.Api.VendorsTest" file="/home/ubuntu/owlpay-php/tests/Api/VendorsTest.php" line="62" assertions="1" time="0.257303"/>
+        <testcase name="it_can_retrieve_vendors" class="OwlTing\OwlPay\Tests\Api\VendorsTest" classname="OwlTing.OwlPay.Tests.Api.VendorsTest" file="/home/ubuntu/owlpay-php/tests/Api/VendorsTest.php" line="76" assertions="2" time="0.132495"/>
+      </testsuite>
+      <testsuite name="OwlTing\OwlPay\Tests\OwlPayTest" file="/home/ubuntu/owlpay-php/tests/OwlPayTest.php" tests="9" assertions="10" errors="0" warnings="0" failures="0" skipped="0" time="0.113867">
+        <testcase name="it_can_create_a_new_instance_using_the_make_method" class="OwlTing\OwlPay\Tests\OwlPayTest" classname="OwlTing.OwlPay.Tests.OwlPayTest" file="/home/ubuntu/owlpay-php/tests/OwlPayTest.php" line="59" assertions="1" time="0.001242"/>
+        <testcase name="it_can_create_a_new_instance_using_enviroment_variables" class="OwlTing\OwlPay\Tests\OwlPayTest" classname="OwlTing.OwlPay.Tests.OwlPayTest" file="/home/ubuntu/owlpay-php/tests/OwlPayTest.php" line="67" assertions="2" time="0.000033"/>
+        <testcase name="it_can_get_and_set_the_api_key" class="OwlTing\OwlPay\Tests\OwlPayTest" classname="OwlTing.OwlPay.Tests.OwlPayTest" file="/home/ubuntu/owlpay-php/tests/OwlPayTest.php" line="77" assertions="1" time="0.000017"/>
+        <testcase name="it_can_get_and_set_the_api_version" class="OwlTing\OwlPay\Tests\OwlPayTest" classname="OwlTing.OwlPay.Tests.OwlPayTest" file="/home/ubuntu/owlpay-php/tests/OwlPayTest.php" line="85" assertions="1" time="0.000019"/>
+        <testcase name="it_can_get_the_current_package_version" class="OwlTing\OwlPay\Tests\OwlPayTest" classname="OwlTing.OwlPay.Tests.OwlPayTest" file="/home/ubuntu/owlpay-php/tests/OwlPayTest.php" line="93" assertions="1" time="0.000101"/>
+        <testcase name="it_can_create_requests" class="OwlTing\OwlPay\Tests\OwlPayTest" classname="OwlTing.OwlPay.Tests.OwlPayTest" file="/home/ubuntu/owlpay-php/tests/OwlPayTest.php" line="101" assertions="1" time="0.000254"/>
+        <testcase name="it_throws_an_exception_when_the_request_is_invalid" class="OwlTing\OwlPay\Tests\OwlPayTest" classname="OwlTing.OwlPay.Tests.OwlPayTest" file="/home/ubuntu/owlpay-php/tests/OwlPayTest.php" line="109" assertions="1" time="0.000148"/>
+        <testcase name="can_retrieve_the_owlpay_headers_from_thrown_exception" class="OwlTing\OwlPay\Tests\OwlPayTest" classname="OwlTing.OwlPay.Tests.OwlPayTest" file="/home/ubuntu/owlpay-php/tests/OwlPayTest.php" line="117" assertions="1" time="0.111939"/>
+        <testcase name="it_throws_an_exception_when_the_api_key_is_not_set" class="OwlTing\OwlPay\Tests\OwlPayTest" classname="OwlTing.OwlPay.Tests.OwlPayTest" file="/home/ubuntu/owlpay-php/tests/OwlPayTest.php" line="131" assertions="1" time="0.000114"/>
+      </testsuite>
+      <testsuite name="OwlTing\OwlPay\Tests\UtilityTest" file="/home/ubuntu/owlpay-php/tests/UtilityTest.php" tests="1" assertions="4" errors="0" warnings="0" failures="0" skipped="0" time="0.000044">
+        <testcase name="it_can_prepare_the_parameters_for_the_request" class="OwlTing\OwlPay\Tests\UtilityTest" classname="OwlTing.OwlPay.Tests.UtilityTest" file="/home/ubuntu/owlpay-php/tests/UtilityTest.php" line="29" assertions="4" time="0.000044"/>
+      </testsuite>
     </testsuite>
   </testsuite>
 </testsuites>

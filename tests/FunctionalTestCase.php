@@ -40,6 +40,11 @@ class FunctionalTestCase extends TestCase
         $this->owlpay = new OwlPay(getenv('OWLPAY_API_KEY'));
     }
 
+    /**
+     * @param $currency
+     * @param $total
+     * @return mixed
+     */
     protected function createOrder($currency, $total)
     {
         return $this->owlpay->orders()->create([
@@ -53,6 +58,21 @@ class FunctionalTestCase extends TestCase
             ],
             'order_created_at' => date('c', time()),
             'allow_transfer_time_at' => date('c', time()),
+        ]);
+    }
+
+    /**
+     * @param $name
+     * @param $email
+     * @return mixed
+     * @throws \Exception
+     */
+    protected function createVendor($name, $email)
+    {
+        return $this->owlpay->vendors()->create([
+            'name' => $name,
+            'email' => $email,
+            'application_vendor_uuid' => time() . random_int(1, 10000),
         ]);
     }
 }

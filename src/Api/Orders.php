@@ -39,9 +39,9 @@ class Orders extends Api
     }
 
     /**
-     * Updates an existing order.
+     * Cancel an existing order.
      *
-     * @param  string  $orderUUId
+     * @param  array  $orderUUIds
      * @return array
      */
     public function cancel($orderUUIds)
