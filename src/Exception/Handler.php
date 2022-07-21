@@ -83,7 +83,13 @@ class Handler
         $missingParameter = isset($error['param']) ? $error['param'] : null;
 
         $this->handleException(
-            $message, $headers, $statusCode, $errorType, $errorCode, $missingParameter, $rawOutput
+            $message,
+            $headers,
+            $statusCode,
+            $errorType,
+            $errorCode,
+            $missingParameter,
+            $rawOutput
         );
     }
 

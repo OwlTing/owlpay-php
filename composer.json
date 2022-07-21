@@ -1,6 +1,6 @@
 {
     "name": "owlting/owlpay-php",
-    "description": "ＯOwlPay API package.",
+    "description": "OwlPay API package.",
     "type": "library",
     "require": {
         "php": ">=7.1",

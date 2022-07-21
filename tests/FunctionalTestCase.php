@@ -62,14 +62,16 @@ class FunctionalTestCase extends TestCase
     }
 
     /**
+     * @param $country_iso
      * @param $name
      * @param $email
      * @return mixed
      * @throws \Exception
      */
-    protected function createVendor($name, $email)
+    protected function createVendor($country_iso, $name, $email)
     {
         return $this->owlpay->vendors()->create([
+            'country_iso' => $country_iso,
             'name' => $name,
             'email' => $email,
             'application_vendor_uuid' => time() . random_int(1, 10000),

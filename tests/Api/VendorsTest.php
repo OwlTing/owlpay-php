@@ -25,7 +25,9 @@ class VendorsTest extends FunctionalTestCase
 
         $email = 'VendorTest_'.time().'_'.random_int(1, 10000).'@owlpay.com';
 
-        $vendor = $this->createVendor($name, $email);
+        $country_iso = "TW";
+        
+        $vendor = $this->createVendor($country_iso, $name, $email);
 
         $vendor = $this->owlpay->vendors()->find($vendor['uuid']);
 
@@ -49,7 +51,9 @@ class VendorsTest extends FunctionalTestCase
 
         $updated_email = 'Updated_VendorTest_'.time().'_'.random_int(1, 10000).'@owlpay.com';
 
-        $vendor = $this->createVendor($name, $email);
+        $country_iso = "TW";
+
+        $vendor = $this->createVendor($country_iso, $name, $email);
 
         $updated_vendor = $this->owlpay->vendors()->update($vendor['uuid'],
             ['email' => $updated_email],
@@ -65,7 +69,9 @@ class VendorsTest extends FunctionalTestCase
 
         $email = 'VendorTest_'.time().'_'.random_int(1, 10000).'@owlpay.com';
 
-        $vendor = $this->createVendor($name, $email);
+        $country_iso = "TW";
+
+        $vendor = $this->createVendor($country_iso, $name, $email);
 
         $vendor = $this->owlpay->vendors()->delete($vendor['uuid']);
 
