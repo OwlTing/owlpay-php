@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites>
-  <testsuite name="OwlTing\OwlPay\Tests\Api\VendorRemitInfoTest" file="/home/ubuntu/owlpay-php/tests/Api/VendorRemitInfoTest.php" tests="1" assertions="2" errors="0" warnings="0" failures="0" skipped="0" time="0.579105">
-    <testcase name="it_can_apply_vendor_remit_info_and_retrieve_vendor_remit_info_list" class="OwlTing\OwlPay\Tests\Api\VendorRemitInfoTest" classname="OwlTing.OwlPay.Tests.Api.VendorRemitInfoTest" file="/home/ubuntu/owlpay-php/tests/Api/VendorRemitInfoTest.php" line="11" assertions="2" time="0.579105"/>
-  </testsuite>
-</testsuites>

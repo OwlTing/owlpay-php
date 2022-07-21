@@ -9,11 +9,19 @@ class OrdersTest extends FunctionalTestCase
     /** @test */
     public function it_can_create_a_new_order()
     {
+        $name = 'VendorTest_'.time();
+
+        $email = 'VendorTest_'.time().'_'.random_int(1, 10000).'@owlpay.com';
+
+        $country_iso = "TW";
+        
+        $vendor = $this->createVendor($country_iso, $name, $email);
+
         $currency = 'TWD';
 
         $total = 1000;
 
-        $order = $this->createOrder($currency, $total);
+        $order = $this->createOrder($vendor['uuid'], $currency, $total);
 
         $this->assertSame('owlpay.received_order', $order['status']);
     }
@@ -21,11 +29,19 @@ class OrdersTest extends FunctionalTestCase
     /** @test */
     public function it_can_find_an_order()
     {
+        $name = 'VendorTest_'.time();
+
+        $email = 'VendorTest_'.time().'_'.random_int(1, 10000).'@owlpay.com';
+
+        $country_iso = "TW";
+        
+        $vendor = $this->createVendor($country_iso, $name, $email);
+
         $currency = 'TWD';
 
         $total = 1000;
 
-        $order = $this->createOrder($currency, $total);
+        $order = $this->createOrder($vendor['uuid'], $currency, $total);
 
         $order = $this->owlpay->orders()->find($order['uuid']);
 
@@ -43,11 +59,19 @@ class OrdersTest extends FunctionalTestCase
     /** @test */
     public function it_can_update_an_order()
     {
+        $name = 'VendorTest_'.time();
+
+        $email = 'VendorTest_'.time().'_'.random_int(1, 10000).'@owlpay.com';
+
+        $country_iso = "TW";
+        
+        $vendor = $this->createVendor($country_iso, $name, $email);
+
         $currency = 'TWD';
 
         $total = 1000;
 
-        $order = $this->createOrder($currency, $total);
+        $order = $this->createOrder($vendor['uuid'], $currency, $total);
 
         $order = $this->owlpay->orders()->update($order['uuid'], [
             'meta_data' => [ 'foo' => 'Bar' ],
@@ -59,11 +83,19 @@ class OrdersTest extends FunctionalTestCase
     /** @test */
     public function it_can_cancel_an_order()
     {
+        $name = 'VendorTest_'.time();
+
+        $email = 'VendorTest_'.time().'_'.random_int(1, 10000).'@owlpay.com';
+
+        $country_iso = "TW";
+        
+        $vendor = $this->createVendor($country_iso, $name, $email);
+
         $currency = 'TWD';
 
         $total = 1000;
 
-        $order = $this->createOrder($currency, $total);
+        $order = $this->createOrder($vendor['uuid'], $currency, $total);
 
         $order = $this->owlpay->orders()->cancel([$order['uuid']]);
 

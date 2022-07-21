@@ -45,9 +45,10 @@ class FunctionalTestCase extends TestCase
      * @param $total
      * @return mixed
      */
-    protected function createOrder($currency, $total)
+    protected function createOrder($vendor_uuid, $currency, $total)
     {
         return $this->owlpay->orders()->create([
+            'vendor_uuid' => $vendor_uuid,
             'currency' => $currency,
             'total' => $total,
             'order_serial' => 'ORS00000001_'.time(),
